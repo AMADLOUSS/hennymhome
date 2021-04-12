@@ -76,4 +76,4 @@ async def r(ctx, *, args=''):
 
 	
 
-bot.run("ODMwODA4NTI0MTg2OTc2Mjc2.YHMEuw.20nFSRkl7Wux2Zwb7gm2PS6RKc8")
+bot.run(DISCORD_BOT_TOKEN)
