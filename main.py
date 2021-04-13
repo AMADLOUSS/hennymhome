@@ -76,4 +76,4 @@ async def r(ctx, *, args=''):
 
 	
 
-bot.run(DISCORD_BOT_TOKEN)
+bot.run(process.env.DISCORD_BOT_TOKEN)
