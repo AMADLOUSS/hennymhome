@@ -12,16 +12,16 @@ client = discord.Client()
 async def on_ready():
 	print("ready !")
 	
-@client.command()
+@bot.command()
 async def talk(ctx, args):
 	await ctx.send(args)
 	
-@client.command()
+@bot.command()
 async def manual():
 	await ctx.send(args)
 
 
-@client.command()
+@bot.command()
 async def d(ctx, *, args=''):
 	url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+args
 	R = requests.get(url)
@@ -39,7 +39,7 @@ async def d(ctx, *, args=''):
 			
 			
 	
-@client.command()
+@bot.command()
 async def c(ctx, *, args=''):
 	url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+args
 	R = requests.get(url)
@@ -56,7 +56,7 @@ async def c(ctx, *, args=''):
 		else :
 			await ctx.send("The drink you are looking for "+args+" is very rare, I can't find it!")	
 			
-@client.command()
+@bot.command()
 async def r(ctx, *, args=''):
 	url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+args
 	R = requests.get(url)
