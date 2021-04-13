@@ -4,23 +4,24 @@ import requests
 import os
 
 bot = commands.Bot(command_prefix ="!", descripton = "Bot hennymhome")
+client = discord.Client()
 
 
 
-@bot.event
+@client.event
 async def on_ready():
 	print("ready !")
 	
-@bot.command()
+@client.command()
 async def talk(ctx, args):
 	await ctx.send(args)
 	
-@bot.command()
+@client.command()
 async def manual():
 	await ctx.send(args)
 
 
-@bot.command()
+@client.command()
 async def d(ctx, *, args=''):
 	url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+args
 	R = requests.get(url)
@@ -38,7 +39,7 @@ async def d(ctx, *, args=''):
 			
 			
 	
-@bot.command()
+@client.command()
 async def c(ctx, *, args=''):
 	url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+args
 	R = requests.get(url)
@@ -55,7 +56,7 @@ async def c(ctx, *, args=''):
 		else :
 			await ctx.send("The drink you are looking for "+args+" is very rare, I can't find it!")	
 			
-@bot.command()
+@client.command()
 async def r(ctx, *, args=''):
 	url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+args
 	R = requests.get(url)
@@ -77,4 +78,4 @@ async def r(ctx, *, args=''):
 
 	
 
-bot.run(os.environ["DISCORD_BOT_TOKEN"])
+client.run(os.environ['DISCORD_BOT_TOKEN'])
