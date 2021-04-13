@@ -72,7 +72,17 @@ async def r(ctx, *, args=''):
 		else :
 			await ctx.send("The drink you are looking for "+args+" is very rare, I can't find it!")
 			
-			
+@bot.command()
+async def manual(ctx):
+	
+	em = discord.Embed(title = "Manual", description = "This is the manual for hennymhome", color=discord.Color.green())
+	
+	
+	em.add_field(name='!d', value='returns all cocktails available with the alcohol you desire', inline=False)
+	em.add_field(name='!c', value='returns an alluring picture of the cocktail you desire', inline=False)
+	em.add_field(name='!r', value='returns the recipe of your final drink', inline=False)
+	
+	await ctx.send(embed = em)			
 
 	
 
