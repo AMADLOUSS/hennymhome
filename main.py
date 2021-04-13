@@ -4,11 +4,10 @@ import requests
 import os
 
 bot = commands.Bot(command_prefix ="!", descripton = "Bot hennymhome")
-client = discord.Client()
 
 
 
-@client.event
+@bot.event
 async def on_ready():
 	print("ready !")
 	
@@ -78,4 +77,4 @@ async def r(ctx, *, args=''):
 
 	
 
-client.run(os.environ['DISCORD_BOT_TOKEN'])
+bot.run(os.environ['DISCORD_BOT_TOKEN'])
