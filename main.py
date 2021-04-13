@@ -14,10 +14,6 @@ async def on_ready():
 @bot.command()
 async def talk(ctx, args):
 	await ctx.send(args)
-	
-@bot.command()
-async def manual():
-	await ctx.send(args)
 
 
 @bot.command()
