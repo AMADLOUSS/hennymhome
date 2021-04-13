@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import requests
+import os
 
 bot = commands.Bot(command_prefix ="!", descripton = "Bot hennymhome")
 
@@ -76,4 +77,4 @@ async def r(ctx, *, args=''):
 
 	
 
-bot.run(DISCORD_BOT_TOKEN)
+bot.run(os.environ["DISCORD_BOT_TOKEN"])
