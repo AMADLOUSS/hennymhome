@@ -67,7 +67,6 @@ async def r(ctx, *, args=''):
 		drinks=R.json()['drinks']
 		if drinks != None:
 			for items in drinks:
-				print(args, items['strDrink'])
 				if items['strDrink'].lower() == args.lower():
 					await ctx.send(items['strInstructions'])
 		else :
