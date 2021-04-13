@@ -4,7 +4,7 @@ import requests
 import os
 
 bot = commands.Bot(command_prefix ="!", descripton = "Bot hennymhome")
-
+bot.remove_command("manual")
 
 
 @bot.event
